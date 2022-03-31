@@ -1,44 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Tip calculator app</title>
+    <title>Frontend Mentor | Tip calculator app</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-  Bill
-
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
-
-  Number of People
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <h1>SPLI<span>TTER</span></h1>
+    <div class="container">
+      <form action="">
+        <h2>Bill</h2>
+        <label for=""></label>
+        <div>
+          <img src="./images/icon-dollar.svg" alt="dollar icon" />
+          <input type="number" name="bill-amount" id="bill" />
+        </div>
+      </form>
+      <div class="selection">
+        <h3>Select Tip %</h3>
+        <button class="percentage">5%</button>
+        <button class="percentage">10%</button>
+        <button class="percentage">15%</button>
+        <button class="percentage">25%</button>
+        <button class="percentage">50%</button>
+        <button class="custom-percentage">Custom</button>
+      </div>
+      <div class="number-of-people">
+        <h3>Number of people</h3>
+        <div>
+          <img src="./images/icon-person.svg" alt="person icon" />
+          <input type="number" name="number-of-people" id="number-of-people" />
+        </div>
+      </div>
+      <div class="output">
+        <div>
+          <div>
+            <p>Tip Amount</p>
+            <p>/ person</p>
+          </div>
+          <p class="tip-amount">$4.27</p>
+        </div>
+        <div>
+          <div>
+            <p>Total</p>
+            <p>/ person</p>
+          </div>
+          <p class="total">$32.79</p>
+        </div>
+        <button id="reset-button">RESET</button>
+      </div>
+    </div>
+  </body>
 </html>
