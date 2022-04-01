@@ -18,28 +18,34 @@
   <body>
     <h1>SPLI<span>TTER</span></h1>
     <div class="container">
-      <form action="">
-        <h2>Bill</h2>
-        <label for=""></label>
-        <div>
-          <img src="./images/icon-dollar.svg" alt="dollar icon" />
-          <input type="number" name="bill-amount" id="bill" />
+      <div class="input">
+        <form>
+          <h2>Bill</h2>
+          <label for=""></label>
+          <div class="bill-amount-input">
+            <img src="./images/icon-dollar.svg" alt="dollar icon" />
+            <input type="text" name="bill-amount" id="bill" value="142" />
+          </div>
+        </form>
+        <div class="selection">
+          <h3>Select Tip %</h3>
+          <button class="percentage">5%</button>
+          <button class="percentage">10%</button>
+          <button class="percentage">15%</button>
+          <button class="percentage">25%</button>
+          <button class="percentage">50%</button>
+          <button class="custom-percentage">Custom</button>
         </div>
-      </form>
-      <div class="selection">
-        <h3>Select Tip %</h3>
-        <button class="percentage">5%</button>
-        <button class="percentage">10%</button>
-        <button class="percentage">15%</button>
-        <button class="percentage">25%</button>
-        <button class="percentage">50%</button>
-        <button class="custom-percentage">Custom</button>
-      </div>
-      <div class="number-of-people">
-        <h3>Number of people</h3>
-        <div>
-          <img src="./images/icon-person.svg" alt="person icon" />
-          <input type="number" name="number-of-people" id="number-of-people" />
+        <div class="number-of-people">
+          <h3>Number of people</h3>
+          <div>
+            <img src="./images/icon-person.svg" alt="person icon" />
+            <input
+              type="number"
+              name="number-of-people"
+              id="number-of-people"
+            />
+          </div>
         </div>
       </div>
       <div class="output">
