@@ -100,3 +100,20 @@ h2 {
   font-weight: var(--fw);
   font-size: var(--fz);
 }
+
+#reset-button {
+  margin: 40px;
+  padding: 9px 40px 9px 37px;
+  background-color: var(--primary);
+  border-radius: 5px;
+  width: 333px;
+  height: 48px;
+  outline: none;
+  border: none;
+  font-size: 20px;
+  line-height: 29.62px;
+  font-family: var(--ff);
+  font-weight: var(--fw);
+  color: var(--very-dark-gray-cyan);
+  cursor: pointer;
+}
