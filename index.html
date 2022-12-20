@@ -16,54 +16,64 @@
     <script src="script.js" defer></script>
   </head>
   <body>
-    <h1>SPLI<span>TTER</span></h1>
     <div class="container">
-      <div class="input">
-        <form>
-          <h2>Bill</h2>
-          <label for=""></label>
-          <div class="bill-amount-input">
-            <img src="./images/icon-dollar.svg" alt="dollar icon" />
-            <input type="text" name="bill-amount" id="bill" value="142" />
+      <header>
+        <h1>SPLI<span>TTER</span></h1>
+      </header>
+      <div class="content-wrapper">
+        <div class="input">
+          <form>
+            <h2>Bill</h2>
+            <label for=""></label>
+            <div class="bill-amount-input">
+              <img src="./images/icon-dollar.svg" alt="dollar icon" />
+              <input
+                type="text"
+                name="bill-amount"
+                id="bill"
+                value="142.553234234"
+              />
+            </div>
+          </form>
+          <div class="selection">
+            <h3>Select Tip %</h3>
+            <button class="percentage">5%</button>
+            <button class="percentage">10%</button>
+            <button class="percentage">15%</button>
+            <button class="percentage">25%</button>
+            <button class="percentage">50%</button>
+            <button class="custom-percentage">Custom</button>
           </div>
-        </form>
-        <div class="selection">
-          <h3>Select Tip %</h3>
-          <button class="percentage">5%</button>
-          <button class="percentage">10%</button>
-          <button class="percentage">15%</button>
-          <button class="percentage">25%</button>
-          <button class="percentage">50%</button>
-          <button class="custom-percentage">Custom</button>
+          <div class="number-of-people">
+            <h3>Number of people</h3>
+            <div class="number-of-people-input">
+              <img src="./images/icon-person.svg" alt="person icon" />
+              <input
+                type="number"
+                name="number-of-people"
+                id="number-of-people"
+                value="5"
+              />
+            </div>
+          </div>
         </div>
-        <div class="number-of-people">
-          <h3>Number of people</h3>
+        <div class="output">
           <div>
-            <img src="./images/icon-person.svg" alt="person icon" />
-            <input
-              type="number"
-              name="number-of-people"
-              id="number-of-people"
-            />
+            <div>
+              <p>Tip Amount</p>
+              <p>/ person</p>
+            </div>
+            <p class="tip-amount">$4.27</p>
           </div>
-        </div>
-      </div>
-      <div class="output">
-        <div>
           <div>
-            <p>Tip Amount</p>
-            <p>/ person</p>
+            <div>
+              <p>Total</p>
+              <p>/ person</p>
+            </div>
+            <p class="total">$32.79</p>
           </div>
-          <p class="tip-amount">$4.27</p>
+          <button id="reset-button">RESET</button>
         </div>
-        <div>
-          <div>
-            <p>Total</p>
-            <p>/ person</p>
-          </div>
-          <p class="total">$32.79</p>
-        </div>
-        <button id="reset-button">RESET</button>
       </div>
     </div>
   </body>
