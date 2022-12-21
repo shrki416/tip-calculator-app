@@ -37,12 +37,14 @@
           </form>
           <div class="selection">
             <h3>Select Tip %</h3>
-            <button class="percentage">5%</button>
-            <button class="percentage">10%</button>
-            <button class="percentage">15%</button>
-            <button class="percentage">25%</button>
-            <button class="percentage">50%</button>
-            <button class="custom-percentage">Custom</button>
+            <div class="percentage-buttons">
+              <button class="percentage-btn">5%</button>
+              <button class="percentage-btn">10%</button>
+              <button class="percentage-btn">15%</button>
+              <button class="percentage-btn">25%</button>
+              <button class="percentage-btn">50%</button>
+              <button class="custom-percentage">Custom</button>
+            </div>
           </div>
           <div class="number-of-people">
             <h3>Number of people</h3>
@@ -59,18 +61,18 @@
         </div>
         <div class="output">
           <div>
-            <div>
+            <div class="tip-amount">
               <p>Tip Amount</p>
-              <p>/ person</p>
+              <input class="amount" type="number" placeholder="$4.27" />
             </div>
-            <p class="tip-amount">$4.27</p>
+            <p class="per-person">/ person</p>
           </div>
           <div>
-            <div>
+            <div class="total-per-person">
               <p>Total</p>
-              <p>/ person</p>
+              <input class="amount" type="number" placeholder="$32.79" />
             </div>
-            <p class="total">$32.79</p>
+            <p class="per-person">/ person</p>
           </div>
           <button id="reset-button">RESET</button>
         </div>

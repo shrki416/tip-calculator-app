@@ -28,6 +28,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh;
 }
 
 .container {
@@ -43,13 +44,27 @@ body {
   background-color: var(--white);
   width: 100%;
   padding: 24px;
-  margin-top: 32px;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
 }
 
 header {
   background-color: var(--bg);
+}
+
+header h1 {
+  font-family: var(--ff);
+  font-weight: var(--fw);
+  font-size: 1.5rem;
+  line-height: 36px;
+  color: var(--heading);
+  text-align: center;
+  padding: 24px 0;
+  letter-spacing: 5px;
+}
+
+h1 span {
+  display: block;
 }
 
 h2, h3 {
@@ -65,6 +80,47 @@ form h2 {
 
 .content-wrapper > *, .input > *, .output > * {
   margin-bottom: 32px;
+}
+
+.percentage-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 16px;
+}
+
+.percentage-btn, .custom-percentage {
+  font-family: var(--ff);
+  border-radius: 5px;
+  padding: 6px 0;
+  font-size: 1.5rem;
+  line-height: 36px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.percentage-btn {
+  background-color: var(--very-dark-gray-cyan);
+  color: var(--white);
+}
+
+.custom-percentage {
+  background-color: var(--very-light-gray-cyan);
+  color: var(--dark-gray-cyan);
+}
+
+.percentage-btn:hover {
+  background-color: var(--primary);
+  color: var(--very-dark-gray-cyan);
+}
+
+.selection h3 {
+  font-family: var(--ff);
+  font-weight: var(--fw);
+  font-size: 1rem;
+  color: var(--heading);
+  margin-bottom: 1rem;
 }
 
 .number-of-people h3 {
@@ -106,6 +162,34 @@ form h2 {
   border-radius: 15px;
   padding: 24px;
   color: white;
+  font-family: var(--ff);
+  font-weight: var(--fw);
+}
+
+.tip-amount, .total-per-person {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.per-person {
+  font-size: 0.8125rem;
+  color: var(--light-gray-cyan);
+}
+
+.amount {
+  border: none;
+  outline: none;
+  background-color: inherit;
+  text-align: right;
+  width: 150px;
+}
+
+input[type="number"] {
+  font-size: 2rem;
+  line-height: 48px;
+  letter-spacing: -0.67px;
+  color: var(--primary);
 }
 
 #reset-button {
