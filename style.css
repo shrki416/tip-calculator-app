@@ -37,9 +37,9 @@ body {
   /* height: 798px; */
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  margin-top: auto;
+  /* margin-top: auto; */
 }
 
 .content-wrapper {
@@ -52,7 +52,7 @@ body {
 
 header {
   background-color: var(--bg);
-  margin-top: 50px;
+  /* margin-top: 50px; */
 }
 
 header h1 {
@@ -227,13 +227,13 @@ input.amount::placeholder {
   .container {
     width: 920px;
     height: 481px;
-    margin-top: 168px;
+    /* margin-top: 168px; */
   }
 
   .content-wrapper {
     border-radius: 25px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 32px;
   }
