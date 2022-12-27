@@ -26,6 +26,7 @@
 body {
   background-color: var(--bg);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -33,16 +34,17 @@ body {
 
 .container {
   width: 375px;
-  height: 798px;
+  /* height: 798px; */
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  margin-top: auto;
 }
 
 .content-wrapper {
   background-color: var(--white);
-  width: 100%;
+  min-width: 375px;
   padding: 24px;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
@@ -50,6 +52,7 @@ body {
 
 header {
   background-color: var(--bg);
+  margin-top: 50px;
 }
 
 header h1 {
@@ -224,6 +227,7 @@ input.amount::placeholder {
   .container {
     width: 920px;
     height: 481px;
+    margin-top: 168px;
   }
 
   .content-wrapper {
@@ -239,6 +243,10 @@ input.amount::placeholder {
         .output>* {
           margin-bottom: 0;
         }
+  
+  .input {
+    padding-right: 48px;
+  }
 
   .output {
     padding: 40px;
