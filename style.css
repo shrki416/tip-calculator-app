@@ -34,12 +34,11 @@ body {
 
 .container {
   width: 375px;
-  /* height: 798px; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* margin-top: auto; */
+  margin-top: auto;
 }
 
 .content-wrapper {
@@ -52,7 +51,7 @@ body {
 
 header {
   background-color: var(--bg);
-  /* margin-top: 50px; */
+  padding: 20px;
 }
 
 header h1 {
@@ -227,39 +226,48 @@ input.amount::placeholder {
   .container {
     width: 920px;
     height: 481px;
-    /* margin-top: 168px; */
+    margin-top: 0;
+    align-items: stretch;
   }
 
   .content-wrapper {
     border-radius: 25px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     padding: 32px;
   }
 
-  .content-wrapper>*,
-        .input>*,
-        .output>* {
-          margin-bottom: 0;
-        }
+  .content-wrapper > *, .input > *, .output > * {
+    margin-bottom: 0;
+  }
   
   .input {
     padding-right: 48px;
+    width: 100%;
   }
 
   .output {
     padding: 40px;
     height: 100%;
     margin-bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 40px;
   }
 
-  .output > * {
+  .form, .selection{
     margin-bottom: 40px;
   }
 
   #reset-button {
-    margin-top: auto;
+    margin-bottom: 0;
+    width: 333px;
+  }
+
+  #reset-button:hover {
+    background-color: var(--bg);
   }
 
   .percentage-buttons {
