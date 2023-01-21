@@ -160,3 +160,23 @@ input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+
+.percent-wrapper {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.percentages {
+  border: none;
+  background-color: var(--secondary);
+  border-radius: 5px;
+  color: var(--white);
+  font-size: 1.5rem;
+  padding: 6px 0;
+}
+
+#custom {
+  padding-right: 1rem;
+  background-color: var(--accent);
+}
