@@ -7,11 +7,9 @@
   --secondary: hsl(183, 100%, 15%);
   --heading-text: hsl(186, 14%, 43%);
   --accent: hsla(185, 38%, 97%);
+  --error: hsl(9, 100%, 64%);
 
   --bg: hsla(185, 41%, 84%, 1);
-
-  /* --light-gray-cyan: hsl(184, 14%, 56%); */
-  /* --very-light-gray-cyan: hsl(189, 41%, 97%); */
 
   --ff-regular: "Space Mono", monospace;
   --fw-bold: 700;
@@ -148,6 +146,11 @@ img[alt="person"] {
   padding: 4px 14px;
 }
 
+.input-wrapper.error {
+  border: 2px solid var(--error);
+  padding: 4px 14px;
+}
+
 input[type="number"] {
   border: none;
   text-align: right;
@@ -184,6 +187,20 @@ input[type="number"]::-webkit-outer-spin-button {
   font-size: 1.5rem;
   padding: 6px 0;
   cursor: pointer;
+}
+
+.percentages:hover {
+  background-color: var(--primary);
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.error-msg {
+  visibility: hidden;
+  color: var(--error);
 }
 
 #custom {
@@ -251,7 +268,7 @@ input[type="number"]::-webkit-outer-spin-button {
   }
 
   .input-wrapper {
-    margin: 0;
+    margin: 6px 0 0;
   }
 
   .result {

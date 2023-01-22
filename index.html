@@ -26,7 +26,7 @@
           <label for="bill">Bill</label>
           <div class="input-wrapper">
             <img data-icon src="/images/icon-dollar.svg" alt="dollar" />
-            <input type="number" id="bill" placeholder="142.55" value="" />
+            <input type="number" id="bill" placeholder="0" value="" />
           </div>
         </div>
         <div>
@@ -47,10 +47,18 @@
           </div>
         </div>
         <div>
-          <label for="number-of-people">Number of People</label>
+          <label class="flex" for="number-of-people">
+            Number of People
+            <span class="error-msg">Can't be zero</span>
+          </label>
           <div class="input-wrapper">
             <img data-icon src="/images/icon-person.svg" alt="person" />
-            <input type="number" id="number-of-people" placeholder="5" />
+            <input
+              type="number"
+              id="number-of-people"
+              placeholder="1"
+              value=""
+            />
           </div>
         </div>
       </section>
