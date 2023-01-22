@@ -103,6 +103,10 @@ body {
   font-weight: var(--fw-bold);
 }
 
+header {
+  align-self: end;
+}
+
 main {
   background-color: var(--white);
   border-top-right-radius: 25px;
@@ -165,6 +169,7 @@ input[type="number"]::-webkit-outer-spin-button {
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(2, 1fr);
+  margin: 1rem 0 2rem 0;
 }
 
 .percentages {
@@ -179,4 +184,76 @@ input[type="number"]::-webkit-outer-spin-button {
 #custom {
   padding-right: 1rem;
   background-color: var(--accent);
+}
+
+.result {
+  background-color: var(--secondary);
+  border-radius: 5px;
+  color: var(--white);
+  display: grid;
+  align-items: center;
+  margin: 0 -0.5rem;
+  padding: 1.5rem;
+  padding-top: 2.25rem;
+  gap: 20px;
+}
+
+.amount-per-person {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.amount-per-person span {
+  display: block;
+  font-size: 0.8125rem;
+  line-height: 1.1875rem;
+  color: var(--heading-text);
+}
+
+.amount-result {
+  font-size: 2rem;
+  color: var(--primary);
+  line-height: 3rem;
+}
+
+#reset {
+  border-radius: 5px;
+  border: none;
+  padding: 9px 0;
+  font-size: 1.25rem;
+  line-height: 1.875rem;
+  color: var(--secondary);
+  background-color: var(--primary);
+  text-transform: uppercase;
+  margin-top: 12px;
+  align-self: end;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  main {
+    display: flex;
+    gap: 3rem;
+    padding: 3rem;
+    border-radius: 25px;
+  }
+  
+  .input {
+    display: grid;
+    gap: 40px;
+    flex: 1;
+  }
+
+  .input-wrapper {
+    margin: 0;
+  }
+
+  .result {
+    flex: 1;
+    align-items: start;
+    padding: 40px;
+    gap: 0px;
+    margin: -0.5rem 0;
+  }
 }
