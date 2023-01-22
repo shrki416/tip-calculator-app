@@ -19,57 +19,52 @@
     <header>
       <img src="/images/logo.svg" alt="logo" />
     </header>
-    <div class="container">
-      <div class="content-wrapper">
-        <div class="input">
-          <form class="form">
-            <h2>Bill</h2>
-            <label for=""></label>
-            <div class="bill-amount-input">
-              <img src="./images/icon-dollar.svg" alt="dollar icon" />
-              <input type="text" name="bill-amount" id="bill" value="142.55" />
-            </div>
-          </form>
-          <div class="selection">
-            <h3>Select Tip %</h3>
-            <div class="percentage-buttons">
-              <button class="percentage-btn">5%</button>
-              <button class="percentage-btn">10%</button>
-              <button class="percentage-btn">15%</button>
-              <button class="percentage-btn">25%</button>
-              <button class="percentage-btn">50%</button>
-              <button class="custom-percentage">Custom</button>
-            </div>
-          </div>
-          <div class="number-of-people">
-            <h3>Number of people</h3>
-            <div class="number-of-people-input">
-              <img src="./images/icon-person.svg" alt="person icon" />
-              <input
-                type="number"
-                name="number-of-people"
-                id="number-of-people"
-                value="5"
-              />
-            </div>
+
+    <main>
+      <section class="input">
+        <div>
+          <label for="bill">Bill</label>
+          <div class="input-wrapper">
+            <img data-icon src="/images/icon-dollar.svg" alt="dollar" />
+            <input type="number" id="bill" placeholder="142.55" />
           </div>
         </div>
-        <div class="output">
-          <div>
-            <div class="tip-amount">
-              <p>Tip Amount <span class="per-person">/ person</span></p>
-              <input class="amount" type="text" placeholder="$4.27" />
-            </div>
+        <div>
+          <label for="select-tip">Select Tip %</label>
+          <div class="percent-wrapper">
+            <input class="percentages" type="button" value="5%" />
+            <input class="percentages" type="button" value="10%" />
+            <input class="percentages" type="button" value="15%" />
+            <input class="percentages" type="button" value="20%" />
+            <input class="percentages" type="button" value="25%" />
+            <input
+              class="custom percentages"
+              type="number"
+              name="number"
+              id="custom"
+              placeholder="Custom"
+            />
           </div>
-          <div>
-            <div class="total-per-person">
-              <p>Total <span class="per-person">/ person</span></p>
-              <input class="amount" type="text" placeholder="$32.79" />
-            </div>
-          </div>
-          <button id="reset-button">RESET</button>
         </div>
-      </div>
-    </div>
+        <div>
+          <label for="number-of-people">Number of People</label>
+          <div class="input-wrapper">
+            <img data-icon src="/images/icon-person.svg" alt="person" />
+            <input type="number" id="number-of-people" placeholder="5" />
+          </div>
+        </div>
+      </section>
+      <section class="result">
+        <div class="amount-per-person">
+          <div>Tip Amount <span>/person</span></div>
+          <div class="amount-result" id="tip-amount">$4.27</div>
+        </div>
+        <div class="amount-per-person">
+          <div>Total <span>/person</span></div>
+          <div class="amount-result" id="total-amount">$32.79</div>
+        </div>
+        <button id="reset" data-reset>Reset</button>
+      </section>
+    </main>
   </body>
 </html>
