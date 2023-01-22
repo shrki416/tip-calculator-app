@@ -1,7 +1,9 @@
 const tipAmount = document.querySelector("#tip-amount");
 const total = document.querySelector("#total-amount");
 const billAmount = document.querySelector("#bill");
-const numberOfPeople = document.querySelector("#number-of-people");
+let numberOfPeople = document.querySelector("#number-of-people");
+const inputWrapper = document.querySelector(".input-wrapper");
+const ErrMsg = document.querySelector(".error-msg");
 
 let billTotal = 0;
 let tipPercentage = 0;
@@ -14,10 +16,22 @@ billAmount.addEventListener("input", (e) => {
 });
 
 numberOfPeople.addEventListener("input", (e) => {
-  numberOfPeople.textContent = e.target.value;
-  numberOfPeopleTotal = Number(e.target.value);
+  numberOfPeople = Number(e.target.value);
+  //   console.log(typeof numberOfPeople);
+  //   if (numberOfPeople >= 0 && numberOfPeople === "") {
+  //     inputWrapper.classList.add("error");
+  //     ErrMsg.style.visibility = "visible";
+  //   } else {
+  //     inputWrapper.classList.remove("error");
+  //     ErrMsg.style.visibility = "hidden";
+  //     numberOfPeopleTotal = Number(e.target.value);
+  //     return numberOfPeopleTotal;
+  //   }
 
-  return numberOfPeopleTotal;
+  if (numberOfPeople >= 0) {
+    inputWrapper.classList.add("error");
+    ErrMsg.style.visibility = "visible";
+  }
 });
 
 const percentBtns = document.querySelectorAll(".percentages");
