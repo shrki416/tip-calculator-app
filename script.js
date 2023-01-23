@@ -1,66 +1,90 @@
 const tipAmount = document.querySelector("#tip-amount");
-const total = document.querySelector("#total-amount");
-const billAmount = document.querySelector("#bill");
-let numberOfPeople = document.querySelector("#number-of-people");
-const inputWrapper = document.querySelector(".input-wrapper");
-const ErrMsg = document.querySelector(".error-msg");
+const totalAmount = document.querySelector("#total-amount");
 
-let billTotal = 0;
-let tipPercentage = 0;
-let numberOfPeopleTotal = 1;
+let amount = 0;
+let percentage = 0;
+let people = 1;
 
-billAmount.addEventListener("input", (e) => {
-  billAmount.textContent = `$${e.target.value}`;
-  billTotal = Number(e.target.value);
-  return billTotal;
+function convertToNumber(item) {
+  return Number(item);
+}
+
+const bill = document.querySelector("#bill");
+bill.addEventListener("focus", (e) => (e.target.value = ""));
+bill.addEventListener("input", (e) => getBillAmount(e));
+function getBillAmount(e) {
+  if (e.target.value === 0) return;
+
+  amount = convertToNumber(e.target.value);
+  calculateTip();
+}
+
+const percentageBtns = document.querySelectorAll(".percentages");
+percentageBtns.forEach((btn) => {
+  btn.addEventListener("click", (e) => getPercentage(e));
 });
+function getPercentage(e) {
+  const { id } = e.target;
 
-numberOfPeople.addEventListener("input", (e) => {
-  numberOfPeople = Number(e.target.value);
-  //   console.log(typeof numberOfPeople);
-  //   if (numberOfPeople >= 0 && numberOfPeople === "") {
-  //     inputWrapper.classList.add("error");
-  //     ErrMsg.style.visibility = "visible";
-  //   } else {
-  //     inputWrapper.classList.remove("error");
-  //     ErrMsg.style.visibility = "hidden";
-  //     numberOfPeopleTotal = Number(e.target.value);
-  //     return numberOfPeopleTotal;
-  //   }
-
-  if (numberOfPeople >= 0) {
-    inputWrapper.classList.add("error");
-    ErrMsg.style.visibility = "visible";
-  }
-});
-
-const percentBtns = document.querySelectorAll(".percentages");
-percentBtns.forEach((btn) => {
-  btn.addEventListener("click", (e) => {
-    tipPercentage = Number(e.target.value.slice(0, -1));
-    calculateTip();
+  percentageBtns.forEach((btn) => {
+    btn.classList.remove("active");
   });
-});
+
+  btn.classList.add("active");
+
+  percentage = convertToNumber(id);
+  calculateTip();
+}
+
+const customPercentInput = document.querySelector("#custom");
+customPercentInput.addEventListener("input", (e) => getCustomPercentage(e));
+function getCustomPercentage(e) {
+  if (e.target.value === "") return;
+
+  percentageBtns.forEach((btn) => {
+    btn.classList.remove("active");
+  });
+
+  percentage = convertToNumber(e.target.value);
+  calculateTip();
+}
+
+const numberOfPeople = document.querySelector("#number-of-people");
+numberOfPeople.addEventListener("input", (e) => getNumberOfPeople(e));
+function getNumberOfPeople(e) {
+  if (e.target.value === "" && e.target.value === 0) return;
+  people = convertToNumber(e.target.value);
+  calculateTip();
+}
 
 const resetBtn = document.querySelector("#reset");
 resetBtn.addEventListener("click", reset);
-
 function reset() {
-  tipAmount.textContent = "$0.00";
-  total.textContent = "$0.00";
-  bill.textContent = "$0.00";
+  bill.value = 0;
   numberOfPeople.value = 1;
-  billAmount.value = 0;
+  customPercentInput.value = "";
+
+  percentageBtns.forEach((btn) => {
+    btn.classList.remove("active");
+  });
+
+  tipAmount.textContent = "$0.00";
+  totalAmount.textContent = "$0.00";
+
+  resetBtn.style.backgroundColor = "var(--inactive)";
 }
 
 function calculateTip() {
-  numberOfPeople.value = numberOfPeopleTotal;
+  console.log({ amount, percentage, people });
+  if (amount === 0 && percentage === 0 && people === 0) {
+    resetBtn.style.backgroundColor = "var(--inactive)";
+    return;
+  } else {
+    resetBtn.style.backgroundColor = "var(--primary)";
+    const tip = (amount * percentage) / 100;
+    const total = amount + tip;
 
-  const tip = (billTotal * tipPercentage) / 100;
-  const totalAmount = billTotal + tip;
-  const tipPerPerson = tip / numberOfPeopleTotal;
-  const totalPerPerson = totalAmount / numberOfPeopleTotal;
-
-  tipAmount.textContent = `$${tipPerPerson.toFixed(2)}`;
-  total.textContent = `$${totalPerPerson.toFixed(2)}`;
+    tipAmount.textContent = `$${(tip / people).toFixed(2)}`;
+    totalAmount.textContent = `$${(total / people).toFixed(2)}`;
+  }
 }

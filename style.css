@@ -8,6 +8,7 @@
   --heading-text: hsl(186, 14%, 43%);
   --accent: hsla(185, 38%, 97%);
   --error: hsl(9, 100%, 64%);
+  --inactive: hsl(183 78% 24%);
 
   --bg: hsla(185, 41%, 84%, 1);
 
@@ -110,6 +111,7 @@ main {
   border-top-right-radius: 25px;
   border-top-left-radius: 25px;
   padding: 2rem;
+  align-self: end;
 }
 
 label {
@@ -146,7 +148,7 @@ img[alt="person"] {
   padding: 4px 14px;
 }
 
-.input-wrapper.error {
+.error-wrapper.error {
   border: 2px solid var(--error);
   padding: 4px 14px;
 }
@@ -193,6 +195,10 @@ input[type="number"]::-webkit-outer-spin-button {
   background-color: var(--primary);
 }
 
+.active {
+  background-color: var(--primary);
+}
+
 .flex {
   display: flex;
   justify-content: space-between;
@@ -205,6 +211,7 @@ input[type="number"]::-webkit-outer-spin-button {
 
 #custom {
   padding-right: 1rem;
+  border-radius: 5px;
   background-color: var(--accent);
 }
 
@@ -257,8 +264,9 @@ input[type="number"]::-webkit-outer-spin-button {
   main {
     display: flex;
     gap: 3rem;
-    padding: 3rem;
     border-radius: 25px;
+    max-width: 904px;
+    align-self: center;
   }
   
   .input {
@@ -269,6 +277,11 @@ input[type="number"]::-webkit-outer-spin-button {
 
   .input-wrapper {
     margin: 6px 0 0;
+  }
+
+  .percent-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 0;
   }
 
   .result {
