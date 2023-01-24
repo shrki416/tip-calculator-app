@@ -106,6 +106,18 @@ header {
   align-self: end;
 }
 
+.visually-hidden {
+  display: inline-block;
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;   
+}
+
 main {
   background-color: var(--white);
   border-top-right-radius: 25px;
@@ -269,7 +281,7 @@ input[type="number"]::-webkit-outer-spin-button {
   header {
     align-self: center;
   }
-  
+
   main {
     display: flex;
     gap: 3rem;
