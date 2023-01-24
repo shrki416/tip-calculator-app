@@ -148,7 +148,7 @@ img[alt="person"] {
   padding: 4px 14px;
 }
 
-.error-wrapper.error {
+.input-wrapper.error {
   border: 2px solid var(--error);
   padding: 4px 14px;
 }

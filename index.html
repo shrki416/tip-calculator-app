@@ -23,7 +23,10 @@
     <main>
       <section class="input">
         <div>
-          <label for="bill">Bill</label>
+          <label class="flex" for="bill">
+            Bill
+            <span data-bill class="error-msg">Can't be zero</span>
+          </label>
           <div class="input-wrapper">
             <img data-icon src="/images/icon-dollar.svg" alt="dollar" />
             <input type="number" id="bill" placeholder="142.55" />
@@ -49,9 +52,9 @@
         <div>
           <label class="flex" for="number-of-people">
             Number of People
-            <span class="error-msg">Can't be zero</span>
+            <span data-number-of-people class="error-msg">Can't be zero</span>
           </label>
-          <div class="input-wrapper error-wrapper">
+          <div class="input-wrapper">
             <img data-icon src="/images/icon-person.svg" alt="person" />
             <input type="number" id="number-of-people" placeholder="1" />
           </div>
@@ -66,7 +69,7 @@
           <div>Total <span>/person</span></div>
           <div class="amount-result" id="total-amount">$32.79</div>
         </div>
-        <button id="reset" data-reset>Reset</button>
+        <button id="reset">Reset</button>
       </section>
     </main>
   </body>
