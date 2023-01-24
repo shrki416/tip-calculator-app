@@ -23,7 +23,10 @@
     <main>
       <section class="input">
         <div>
-          <label for="bill">Bill</label>
+          <label class="flex" for="bill">
+            Bill
+            <span data-bill class="error-msg">Can't be zero</span>
+          </label>
           <div class="input-wrapper">
             <img data-icon src="/images/icon-dollar.svg" alt="dollar" />
             <input type="number" id="bill" placeholder="142.55" />
@@ -32,13 +35,13 @@
         <div>
           <label for="select-tip">Select Tip %</label>
           <div class="percent-wrapper">
-            <input class="percentages" type="button" value="5%" />
-            <input class="percentages" type="button" value="10%" />
-            <input class="percentages" type="button" value="15%" />
-            <input class="percentages" type="button" value="20%" />
-            <input class="percentages" type="button" value="25%" />
+            <input class="percentages" id="5" type="button" value="5%" />
+            <input class="percentages" id="10" type="button" value="10%" />
+            <input class="percentages" id="15" type="button" value="15%" />
+            <input class="percentages" id="20" type="button" value="20%" />
+            <input class="percentages" id="25" type="button" value="25%" />
             <input
-              class="custom percentages"
+              class="custom"
               type="number"
               name="number"
               id="custom"
@@ -47,10 +50,13 @@
           </div>
         </div>
         <div>
-          <label for="number-of-people">Number of People</label>
+          <label class="flex" for="number-of-people">
+            Number of People
+            <span data-number-of-people class="error-msg">Can't be zero</span>
+          </label>
           <div class="input-wrapper">
             <img data-icon src="/images/icon-person.svg" alt="person" />
-            <input type="number" id="number-of-people" placeholder="5" />
+            <input type="number" id="number-of-people" placeholder="1" />
           </div>
         </div>
       </section>
@@ -63,7 +69,7 @@
           <div>Total <span>/person</span></div>
           <div class="amount-result" id="total-amount">$32.79</div>
         </div>
-        <button id="reset" data-reset>Reset</button>
+        <button id="reset">Reset</button>
       </section>
     </main>
   </body>
