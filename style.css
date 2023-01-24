@@ -164,6 +164,11 @@ input[type="number"] {
   cursor: pointer;
 }
 
+input[type="number"]::placeholder {
+  color: var(--secondary);
+  opacity: 0.35;
+}
+
 input[type="number"]:focus {
   outline: none;
 }
