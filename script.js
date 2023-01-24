@@ -101,8 +101,8 @@ const resetBtn = document.querySelector("#reset");
 resetBtn.addEventListener("click", reset);
 
 function reset() {
-  bill.value = 0;
-  numberOfPeople.value = 0;
+  bill.value = "";
+  numberOfPeople.value = "";
   customPercentInput.value = "";
 
   percentageBtns.forEach((btn) => {

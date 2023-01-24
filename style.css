@@ -266,12 +266,16 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 @media (min-width: 768px) {
+  header {
+    align-self: center;
+  }
+  
   main {
     display: flex;
     gap: 3rem;
     border-radius: 25px;
     max-width: 904px;
-    align-self: center;
+    align-self: start;
   }
   
   .input {
