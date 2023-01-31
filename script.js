@@ -45,6 +45,10 @@ bill.addEventListener("input", (e) => getBillAmount(e));
 function getBillAmount(e) {
   errorCheck(e);
   if (e.target.value === "0" || e.target.value === "") return;
+  // prevent user from entering 0 as first digit or multiple 0s
+  if (e.target.value[0] === "0") {
+    e.target.value = "";
+  }
 
   e.target.value = formatNumber(e.target.value.substring(0, 10));
 
