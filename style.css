@@ -118,6 +118,12 @@ header {
   border: 0;   
 }
 
+@media (max-width: 550px) {
+  header {
+    margin: 1.5rem 0;
+  }
+}
+
 main {
   background-color: var(--white);
   border-top-right-radius: 25px;
