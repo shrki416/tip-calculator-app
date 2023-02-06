@@ -58,6 +58,8 @@ percentageBtns.forEach((btn) => {
 });
 
 function getPercentage(e) {
+  if ((!bill.value || bill.value === "0") && !numberOfPeople.value) return;
+
   percentageBtns.forEach((btn) => {
     btn.classList.remove("active");
   });
